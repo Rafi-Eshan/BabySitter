@@ -7,7 +7,7 @@ body{
 
 .loginbox{
 	width: 320px;
-	height: 585px;
+	height: 540px;
 	background: #EDD920;
 	color: #434C54;
 	top: 50%;
@@ -100,4 +100,40 @@ h1{
 .loginbox a:hover {
 	color: #27f3f3;
 	text-shadow: -1px 0 #434C54, 0 1px #434c54, 1px 0 #434c54, 0 -1px #434c54;
+}
+
+/* Animation */
+
+.stroller{
+	animation: stroller;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transition-property: all;
+	transition-duration: 0.2s;
+}
+@keyframes stroller{
+	0%{
+		top: -500%;
+	}
+	100%{
+		top: -10%;
+	}
+}
+
+.loginbox{
+	animation: loginbox;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes loginbox{
+	0%{
+		top: 200%;
+	}
+	100%{
+		top: 50%;
+	}
+}
+
+.stroller:hover{
+	transform: rotateY(180deg);
 }
